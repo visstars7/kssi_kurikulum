@@ -13,6 +13,6 @@ class Landing extends MX_Controller
         $data = [
             'title' => 'Landing'
         ];
-        $this->load->view('v_landing');
+        return view('Landing.views.v_landing', $data);
     }
 };
