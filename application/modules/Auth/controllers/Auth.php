@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Kurikulum extends MX_Controller
+class Auth extends MX_Controller
 {
     public function __construct()
     {
@@ -11,8 +11,8 @@ class Kurikulum extends MX_Controller
     public function index()
     {
         $data = [
-            'title' => 'Kurikulum'
+            'title' => 'Login'
         ];
-        return view('Kurikulum.views.v_kurikulum', $data);
+        return view('Auth.views.v_auth', $data);
     }
 };
