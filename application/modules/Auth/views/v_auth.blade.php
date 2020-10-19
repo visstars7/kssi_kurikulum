@@ -76,6 +76,10 @@
         opacity: 0;
     }
 
+    .color-text {
+        color: #5d78ff;
+    }
+
     @media (min-width: 768px) {
         .card {
             left: 30%;
@@ -109,13 +113,13 @@
         <div class="card">
             <div class="kt-login-v2__title">
                 <br>
-                <h3 class="mx-4">Login</h3>
+                <h3 class="mx-4 color-text">Login</h3>
                 <hr class="mx-4">
             </div>
 
             <!--begin::Form-->
             <form class="kt-login-v2__form kt-form" action="" autocomplete="off">
-                <div class="form-group mx-4">
+                <div class="form-group mx-4 color-text">
                     <input class="form-control" type="text" placeholder="Username" name="username" autocomplete="off">
                 </div>
                 <div class="form-group mx-4">
@@ -124,7 +128,7 @@
 
                 <!--begin::Action-->
                 <div class="kt-login-v2__actions d-flex flex-row-reverse bd-highlight mx-4 my-3">
-                    <button type="submit" class="btn btn-brand btn-elevate btn-pill">Login</button>
+                    <button type="submit" class="btn btn-brand btn-elevate btn-pill" style="background-color: #5d78ff;">Login</button>
                 </div>
 
                 <!--end::Action-->
