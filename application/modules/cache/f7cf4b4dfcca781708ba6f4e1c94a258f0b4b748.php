@@ -1,7 +1,10 @@
 
 <?php $__env->startSection('title','Kurikulum'); ?>
+<?php $__env->startSection('sidebar'); ?>
+
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
-<div>
+<div style="margin-left:30px;margin-top:30px">
     <h2>Ini adalah view dari kurikulum </h2>
 </div>
 <?php $__env->stopSection(); ?>
