@@ -120,12 +120,18 @@
             display: none;
         }
 
+        @media (min-width: 991px) {
+            .letak {
+                margin-top: 10px;
+            }
+        }
+
         @media (max-width: 991px) {
             .menuicon {
                 display: block !important;
                 position: fixed;
                 top: 5%;
-                right: 3%;
+                right: 1%;
                 width: 60px;
                 height: 60px;
                 filter: invert(1);
@@ -139,7 +145,7 @@
                 display: block !important;
                 position: fixed;
                 top: 5%;
-                right: 3%;
+                right: 1%;
                 width: 60px;
                 height: 60px;
                 filter: invert(1);
@@ -188,6 +194,7 @@
             }
 
             .section .content {
+                margin-top: 45px;
                 padding: 50px;
                 bottom: 100px;
             }
@@ -230,9 +237,9 @@
         </div>
     </div>
     <ul class="nav close" id="nav">
-        <li><a href="">Beranda1</a></li>
-        <li><a href="">Beranda2</a></li>
-        <li><a href="">Beranda3</a></li>
+        <li class="letak"><a href="">Beranda</a></li>
+        <li class="letak"><a href="">Tentang Kami</a></li>
+        <li><a href="<?= base_url('Auth') ?>" class="btn rounded-pill" style="background:#5d78ff;color:white;">Login</a></li>
     </ul>
     <span class="menuicon" onclick="menuToggle()"><i class="fas fa-list text-dark"></i></span>
     <script type="text/javascript">
