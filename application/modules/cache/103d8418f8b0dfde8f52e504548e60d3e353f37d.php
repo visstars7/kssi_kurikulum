@@ -22,6 +22,8 @@ License: You must have a valid license purchased only from https://themes.getboo
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <link rel="shortcut icon" href="assets/img/logo_kurikulum.png">
+
     <!--begin::Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
 
@@ -44,8 +46,20 @@ License: You must have a valid license purchased only from https://themes.getboo
     <link href="assets/keen/css/skins/brand/navy.css" rel="stylesheet" type="text/css" />
     <link href="assets/keen/css/skins/aside/navy.css" rel="stylesheet" type="text/css" />
 
-    <!--end::Layout Skins -->
-    <link rel="shortcut icon" href="assets/keen/media/logos/favicon.ico" />
+
+    <!--begin:Assets -->
+    <link rel="stylesheet" href="<?= base_url('assets/plugins/bootstrap/css/bootstrap.min.css'); ?>">
+
+    <link rel="stylesheet" href="<?= base_url('assets/plugins/DataTables/DataTables-1.10.21/css/dataTables.bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/plugins/DataTables/Responsive-2.2.5/css/responsive.bootstrap.min.css'); ?>">
+
+    <link rel="stylesheet" href="<?= base_url('assets/plugins/fontawsome/css/all.min.css'); ?>">
+
+    <link rel="stylesheet" href="<?= base_url('assets/plugins/select2/dist/select2-bootstrap4.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/plugins/select2/dist/select2-bootstrap4.min.css'); ?>">
+
+
+    <!--end::Assets -->
 </head>
 
 <!-- end::Head -->
@@ -57,8 +71,8 @@ License: You must have a valid license purchased only from https://themes.getboo
     <!-- begin:: Header Mobile -->
     <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
         <div class="kt-header-mobile__logo">
-            <a href="index.html">
-                <img alt="Logo" src="assets/keen/media/logos/logo-6.png" />
+            <a href="<?= base_url('landing') ?>">
+                <img alt="Logo" src="assets/img/logo_kurikulum.png" style="width: 20%;">
             </a>
         </div>
         <div class="kt-header-mobile__toolbar">
@@ -82,8 +96,8 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <!-- begin::Aside Brand -->
                 <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
                     <div class="kt-aside__brand-logo">
-                        <a href="index.html">
-                            <img alt="Logo" src="assets/keen/media/logos/logo-6.png" />
+                        <a href="<?= base_url('landing') ?>">
+                            <img alt="Logo" src="assets/img/logo_kurikulum.png" style="width: 30%; margin-top:5%;">
                         </a>
                     </div>
                     <div class="kt-aside__brand-tools">
@@ -109,21 +123,25 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <!-- begin:: Header -->
                 <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
                     <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
+                        <?php echo $__env->yieldContent('user-role'); ?>
                     </div>
                     <!-- begin:: Header Menu -->
                     <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+                    <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
+                        <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout- ">
+                        </div>
+                    </div>
 
                     <!-- begin:: Header Topbar -->
                     <div class="kt-header__topbar">
-
                         <!--begin: User Bar -->
                         <div class="kt-header__topbar-item kt-header__topbar-item--user">
                             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
 
                                 <!--use "kt-rounded" class for rounded avatar style-->
                                 <div class="kt-header__topbar-user kt-rounded-">
-                                    <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-                                    <span class="kt-header__topbar-username kt-hidden-mobile">Sean</span>
+                                    <span class="kt-header__topbar-welcome">Hi,</span>
+                                    <span class="kt-header__topbar-username">Sean</span>
                                     <img alt="Pic" src="assets/keen/media/users/300_25.jpg" class="kt-rounded-" />
 
                                     <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
@@ -189,6 +207,23 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <!-- begin:content -->
                 <?php echo $__env->yieldContent('content'); ?>
                 <!-- end:content -->
+
+                <!-- begin:Assets -->
+
+                <script href="<?= base_url('assets/plugins/bootstrap/js/bootstrap.min.js'); ?>"></script>
+
+                <script href="<?= base_url('assets/plugins/fontawesome/DataTables-1.10.21/js/dataTables.bootstrap4.js'); ?>"></script>
+                <script href="<?= base_url('assets/plugins/DataTables/DataTables-1.10.21/js/jquery.dataTables.js'); ?>"></script>
+                <script href="<?= base_url('assets/plugins/DataTables/DataTables-1.10.21/js/jquery.dataTables.min.js'); ?>"></script>
+
+                <script href="<?= base_url('assets/plugins/DataTables/Responsive-2.2.5/js/responsive.bootstrap4.js'); ?>"></script>
+
+                <script href="<?= base_url('assets/plugins/fontawesome/js/all.min.js'); ?>"></script>
+
+                <script href="<?= base_url('assets/plugins/select2/docs/script.js'); ?>"></script>
+
+                <!-- end:Assets -->
+
                 <!-- begin::Global Config(global config for global JS sciprts) -->
                 <script>
                     var KTAppOptions = {
