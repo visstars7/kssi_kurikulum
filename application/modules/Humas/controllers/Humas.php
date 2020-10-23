@@ -11,6 +11,6 @@ class Humas extends MX_Controller
 
     public function index()
     {
-        $this->load->view('Humas.views.v_humas');
+        return view('Humas.views.v_humas');
     }
 }
