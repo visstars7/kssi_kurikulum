@@ -11,6 +11,9 @@ class Perpustakaan extends MX_Controller
 
     public function index()
     {
-        return view('Perpustakaan.views.v_perpustakaan');
+        $data = [
+            'activeSide' => 'e_book',
+        ];
+        return view('Perpustakaan.views.e_book', $data);
     }
 }
