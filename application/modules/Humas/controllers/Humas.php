@@ -11,6 +11,9 @@ class Humas extends MX_Controller
 
     public function index()
     {
-        return view('Humas.views.v_humas');
+        $data = [
+            'activeSide' => 'dudi_prakerin',
+        ];
+        return view('Humas.views.humas', $data);
     }
 }
