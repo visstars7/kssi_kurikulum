@@ -71,7 +71,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <!-- begin:: Header Mobile -->
     <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
         <div class="kt-header-mobile__logo">
-            <a href="<?= base_url('landing') ?>">
+            <a href="<?= base_url('Landing') ?>">
                 <img alt="Logo" src="assets/img/logo_kurikulum.png" style="width: 20%;">
             </a>
         </div>
@@ -96,7 +96,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <!-- begin::Aside Brand -->
                 <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
                     <div class="kt-aside__brand-logo">
-                        <a href="<?= base_url('landing') ?>">
+                        <a href="<?= base_url('Landing') ?>">
                             <img alt="Logo" src="assets/img/logo_kurikulum.png" style="width: 30%; margin-top:5%;">
                         </a>
                     </div>
