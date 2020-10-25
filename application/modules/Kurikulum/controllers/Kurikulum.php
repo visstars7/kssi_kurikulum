@@ -10,6 +10,9 @@ class Kurikulum extends MX_Controller
 
     public function index()
     {
-        return view('Kurikulum.views.v_kurikulum');
+        $data = [
+            'nama' => 'Havis'
+        ];
+        return view('Kurikulum.views.absensi_guru', $data);
     }
 };

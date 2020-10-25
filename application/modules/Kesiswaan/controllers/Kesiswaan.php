@@ -10,6 +10,9 @@ class Kesiswaan extends MX_Controller
 
     public function index()
     {
-        return view('Kesiswaan.views.v_kesiswaan');
+        $data = [
+            'activeSide' => 'pelanggaran',
+        ];
+        return view('Kesiswaan.views.pelanggaran', $data);
     }
 };
