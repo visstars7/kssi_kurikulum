@@ -53,6 +53,6 @@
         </ul>
     </div>
 </li>
-<li class="kt-menu__item my-1 <?= $activeSide == 'e_rapot' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-award"></i><span class="kt-menu__link-text">E-rapot</span></a></li>
+<li class="kt-menu__item my-1 <?= $activeSide == 'absensi_kbm' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-award"></i><span class="kt-menu__link-text">E-rapot</span></a></li>
 
 @endsection
