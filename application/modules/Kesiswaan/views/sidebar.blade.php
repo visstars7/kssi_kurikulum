@@ -5,7 +5,7 @@
 @endsection
 @section('sidebar')
 <li class="kt-menu__item my-1 <?= $activeSide == 'pelanggaran_siswa' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-gavel"></i><span class="kt-menu__link-text">Pelanggaran Siswa</span></a></li>
-<li class="kt-menu__item my-1 <?= $activeSide == 'absensi_siswa' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-calendar-with-a-clock-time-tools"></i><span class="kt-menu__link-text">Absensi Siswa</span></a></li>
+<li class="kt-menu__item my-1 <?= $activeSide == 'absensi_siswa' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-calendar-alt"></i><span class="kt-menu__link-text">Absensi Siswa</span></a></li>
 <li class="kt-menu__item  kt-menu__item--submenu my-1 <?= $activeSide == 'pembagian_kelas' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fas fa-chalkboard-teacher" style="margin-left:-3px;"></i><span class="kt-menu__link-text" style="margin-left:3px;">Pembagian Kelas</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
         <ul class="kt-menu__subnav">
