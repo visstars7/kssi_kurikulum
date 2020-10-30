@@ -14,6 +14,6 @@ class Kurikulum extends MX_Controller
             'nama' => 'Havis',
             'activeSide' => 'absensi_kbm'
         ];
-        return view('Kurikulum.views.absensi_guru', $data);
+        view('Kurikulum.views.absensi_guru', $data);
     }
 };
