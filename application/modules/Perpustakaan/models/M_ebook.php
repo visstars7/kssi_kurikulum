@@ -2,10 +2,30 @@
 class M_ebook extends CI_Model
 
 {
+    public function insert($table, $data)
+    {
+        if($this->db->insert($table, $data)){
+            redirect(base_url('e-book'));
+        }
+    }
+
+    public function delete($table, $data)
+    {
+        if($this->db->delete($table, $data)){
+            redirect(base_url('e-book'));
+        }
+    }
+
+    public function update($table,$data){
+        if($this->db->update($table,$data)){
+            redirect(base_url('e-book'));
+        }
+    }
+
     var $table = 'v_ebook'; //nama tabel dari database
-    var $column_order = array(); //Sesuaikan dengan field
-    var $column_search = array(); //field yang diizin untuk pencarian 
-    var $order = array('' => ''); // default order 
+    var $column_order = array(null,null,null,'semester',null,null,null); //Sesuaikan dengan field
+    var $column_search = array('judul_buku','nama_mapel','nama_kelas','semester'); //field yang diizin untuk pencarian 
+    var $order = array('nama_kelas' => 'DESC'); // default order 
 
     private function _get_datatables_query()
     {
