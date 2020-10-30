@@ -62,4 +62,10 @@ class Perpustakaan extends MX_Controller
             exit('Maaf data tidak bisa ditampilkan');
         }
     }
+
+    public function testUpload()
+    {
+        var_dump(checkpict('test', $_FILES, 'e-book'));
+        die;
+    }
 }
