@@ -1,5 +1,5 @@
-@extends('Perpustakaan.views.perpustakaan')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="container-fluid">
     <div class="row mt-5">
         <div class="col-md-12">
@@ -173,4 +173,5 @@
 
     });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Perpustakaan.views.perpustakaan', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH E:\xampp\htdocs\kssi_kurikulum\application\modules/Perpustakaan/views/e_book.blade.php ENDPATH**/ ?>

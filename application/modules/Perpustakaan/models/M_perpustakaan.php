@@ -9,4 +9,8 @@ class M_perpustakaan extends CI_Model
         parent::__construct();
         $this->master = $this->load->database('db_master', TRUE);
     }
+    public function get($table, $database)
+    {
+        return $this->$database->get($table)->result_array();
+    }
 };
