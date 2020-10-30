@@ -14,6 +14,6 @@ class Perpustakaan extends MX_Controller
         $data = [
             'activeSide' => 'e_book',
         ];
-        return view('Perpustakaan.views.e_book', $data);
+        return view('Perpustakaan.views.perpustakaan', $data);
     }
 }
