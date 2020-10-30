@@ -29,6 +29,25 @@
 
 
 <script>
-    $("#table-perpus").DataTable();
+    $('#table-perpus').DataTable({
+        responsive: true,
+        "destroy": true,
+        "processing": true,
+        "serverSide": true,
+        "order": [],
+
+        "ajax": {
+            "url": "<?= base_url('Perpustakaan/ebook_datatable') ?>",
+            "type": "POST"
+        },
+
+
+        "columnDefs": [{
+            "targets": [0],
+            "orderable": false,
+            "width": 5
+        }],
+
+    });
 </script>
 @endsection

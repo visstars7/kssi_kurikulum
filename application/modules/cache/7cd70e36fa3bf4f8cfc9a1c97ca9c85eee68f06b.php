@@ -28,7 +28,26 @@
 
 
 <script>
-    $("#table-perpus").DataTable();
+    $('#table-perpus').DataTable({
+        responsive: true,
+        "destroy": true,
+        "processing": true,
+        "serverSide": true,
+        "order": [],
+
+        "ajax": {
+            "url": "<?= base_url('Perpustakaan/ebook_datatable') ?>",
+            "type": "POST"
+        },
+
+
+        "columnDefs": [{
+            "targets": [0],
+            "orderable": false,
+            "width": 5
+        }],
+
+    });
 </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('Perpustakaan.views.perpustakaan', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Perpustakaan/views/e_book.blade.php ENDPATH**/ ?>
