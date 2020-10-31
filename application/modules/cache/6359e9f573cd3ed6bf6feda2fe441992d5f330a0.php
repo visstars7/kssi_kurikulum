@@ -27,7 +27,7 @@
     </div>
     <div class="row">
         <div class="card">
-            Hello
+
         </div>
     </div>
 </div>
