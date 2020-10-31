@@ -1,30 +1,49 @@
 <?php
 class M_ebook extends CI_Model
-
 {
+    private $master;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->master = $this->load->database('db_master', TRUE);
+    }
+
     public function insert($table, $data)
     {
-        if($this->db->insert($table, $data)){
+        if ($this->db->insert($table, $data)) {
             redirect(base_url('e-book'));
         }
     }
 
     public function delete($table, $data)
     {
-        if($this->db->delete($table, $data)){
+        if ($this->db->delete($table, $data)) {
             redirect(base_url('e-book'));
         }
     }
 
-    public function update($table,$data){
-        if($this->db->update($table,$data)){
+    public function update($table, $data, $id, $column)
+    {
+        $this->db->where($column, $id);
+        if ($this->db->update($table, $data)) {
             redirect(base_url('e-book'));
         }
+    }
+
+    public function get_where($table, $data)
+    {
+        return $this->db->get_where($table, $data)->result_array();
+    }
+
+    public function get_multi_db($table, $database)
+    {
+        return $this->$database->get($table)->result_array();
     }
 
     var $table = 'v_ebook'; //nama tabel dari database
-    var $column_order = array(null,null,null,'semester',null,null,null); //Sesuaikan dengan field
-    var $column_search = array('judul_buku','nama_mapel','nama_kelas','semester'); //field yang diizin untuk pencarian 
+    var $column_order = array(null, null, null, 'semester', null, null, null); //Sesuaikan dengan field
+    var $column_search = array('judul_buku', 'nama_mapel', 'nama_kelas', 'semester'); //field yang diizin untuk pencarian 
     var $order = array('nama_kelas' => 'DESC'); // default order 
 
     private function _get_datatables_query()
