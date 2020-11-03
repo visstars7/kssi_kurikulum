@@ -55,7 +55,7 @@ class Perpustakaan extends MX_Controller
         if ($this->input->is_ajax_request() == true) {
             $id = $this->input->post('id_ebook');
             $data = [
-                'ebook' => $this->M_ebook->get_where('tb_ebook', ['id_ebook' => $id]),
+                'ebook' => $this->M_ebook->get_where('v_ebook', ['id_ebook' => $id]),
                 'kelas' => $this->M_ebook->get_multi_db('kelas', 'master'),
                 'mapel' => $this->M_ebook->get_multi_db('tb_mapel', 'db'),
             ];
