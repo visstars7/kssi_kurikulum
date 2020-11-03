@@ -53,6 +53,7 @@ $route['default_controller'] = 'Landing';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 $route['Auth'] = 'Auth';
+$route['e-book'] = 'Perpustakaan/e_book';
 $route['Kurikulum'] = 'Kurikulum';
 $route['Kesiswaan'] = 'Kesiswaan';
 $route['Humas'] = 'Humas';
