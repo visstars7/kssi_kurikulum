@@ -104,7 +104,7 @@
             <div class="modal-body">
                 <form action="<?= base_url('Perpustakaan/update') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <input type="hidden" name="id_ebook" id="id_ebook-update">
+                        <input type="hidden" name="id_ebook" id="id-ebook-update">
                     </div>
                     <div class="form-group">
                         <label for="mapel" class="col-form-label">Mapel: </label>
@@ -116,10 +116,7 @@
                     </div>
                     <div class="form-group">
                         <label for="judul-buku" class="col-form-label">Tingkat Kelas: </label>
-                        <select name="tingkat_kelas" id="tingkat_kelas-update" class="custom-select">
-                            <option value="1">X</option>
-                            <option value="2">XI</option>
-                            <option value="3">XII</option>
+                        <select name="tingkat_kelas" id="tingkat-kelas-update" class="custom-select">
                         </select>
                     </div>
                     <div class="form-group">
@@ -129,8 +126,6 @@
                     <div class="form-group">
                         <label for="semester" class="col-form-label">Semester: </label>
                         <select name="semester" id="semester-update" class="custom-select" name="semester">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
                         </select>
                     </div>
                     <label class="col-form-label">Upload file buku: </label>
@@ -162,9 +157,45 @@
                 var ebook = obj.ebook[0];
                 var kelas = obj.kelas;
                 var mapel = obj.mapel;
+                var optKelas = [];
+                var optMapel = [];
+                var optSmt = [];
+                var optTingkat = [];
+                $.each(kelas, (index, value) => {
+                    if (value.id === ebook.id_kelas) {
+                        optKelas += `<option value=${value.id} selected>${value.nama}</option>`
+                    } else {
+                        optKelas += `<option value=${value.id}>${value.nama}</option>`
+                    }
+                });
+                $.each(mapel, (index, value) => {
+                    if (value.id_mapel === ebook.id_mapel) {
+                        optMapel += `<option value=${value.id_mapel} selected>${value.nama_mapel}</option>`
+                    } else {
+                        optMapel += `<option value=${value.id_mapel}>${value.nama_mapel}</option>`
+                    }
+                });
+                for (let index = 1; index <= 2; index++) {
+                    if (ebook.semester == index) {
+                        optSmt += `<option value=${index} selected>${index}</option>`
+                    } else {
+                        optSmt += `<option value=${index}>${index}</option>`
+                    }
+                }
+                for (let index = 1; index <= 3; index++) {
+                    if (ebook.tingkat_kelas == index) {
+                        optTingkat += `<option value=${index} selected>${index}</option>`
+                    } else {
+                        optTingkat += `<option value=${index}>${index}</option>`
+                    }
+                }
 
-                // tampilkan disini
-                console.log(ebook);
+                $("#kelas-update").html(optKelas);
+                $("#mapel-update").html(optMapel);
+                $("#judul-buku-update").val(ebook.judul_buku);
+                $("#tingkat-kelas-update").html(optTingkat);
+                $("#semester-update").html(optSmt);
+                $("#id-ebook-update").val(ebook.id_ebook);
             }
         });
     }

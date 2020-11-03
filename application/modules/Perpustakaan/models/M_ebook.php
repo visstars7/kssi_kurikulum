@@ -28,6 +28,8 @@ class M_ebook extends CI_Model
         $this->db->where($column, $id);
         if ($this->db->update($table, $data)) {
             redirect(base_url('e-book'));
+        } else {
+            show_error("Tidak dapat update", 500, "Kesalahan models");
         }
     }
 

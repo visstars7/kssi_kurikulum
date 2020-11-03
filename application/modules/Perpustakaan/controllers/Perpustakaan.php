@@ -90,13 +90,11 @@ class Perpustakaan extends MX_Controller
                     'file' => $pict_name,
                     'update_at' => date('Y-m-d H:i:s')
                 ];
-
-                $this->M_ebook->update('tb_ebook', $data, $this->input->post('id_ebook'), 'id_ebook');
             } else {
                 echo 'error datatype';
-                die;
             }
         }
+        $this->M_ebook->update('tb_ebook', $data, $this->input->post('id_ebook'), 'id_ebook');
     }
 
 
