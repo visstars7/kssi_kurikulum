@@ -211,9 +211,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <object type="application/pdf" id="pdf-object" style="width:100%" height="700">
-                </object>
+            <div class="modal-body" id="pdf-object">
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                 </div>
@@ -285,7 +284,6 @@
             success: (res) => {
                 var obj = JSON.parse(res);
                 var ebook = obj.ebook[0];
-                console.log(ebook);
                 $("#mapel-detail").html(`<option>${ebook.nama_mapel}</option>`);
                 $("#kelas-detail").html(`<option>${ebook.nama_kelas}</option>`);
                 $("#tingkat-kelas-detail").html(`<option>${ebook.tingkat_kelas}</option>`);
@@ -293,7 +291,8 @@
                 $("#semester-detail").html(`<option>${ebook.semester}</option>`);
                 $("#create-at-detail").val(ebook.create_at);
                 $("#update-detail").val(ebook.update_at);
-                $("#pdf-object").attr("data", ebook.file);
+                $("#pdf-object").html(` <object type="application/pdf" data="${ebook.file}" id="pdf-object" style="width:100%" height="700">
+                </object>`);
             }
 
         });
