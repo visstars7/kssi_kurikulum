@@ -4,7 +4,7 @@
 </div>
 @endsection
 @section('sidebar')
-<li class="kt-menu__item my-1 <?= $activeSide == 'dashboard' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-chart-line"></i><span class="kt-menu__link-text">Dashboard</span></a></li>
+<li class="kt-menu__item my-1 <?= $activeSide == 'dashboard' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-tachometer-alt"></i><span class="kt-menu__link-text">Dashboard</span></a></li>
 <li class="kt-menu__item my-1 <?= $activeSide == 'admin_kurikulum' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum') ?>" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-user"></i><span class="kt-menu__link-text">Admin Kurikulum</span></a></li>
 <li class="kt-menu__item my-1 <?= $activeSide == 'admin_kesiswaan' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kesiswaan') ?>" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-user"></i><span class="kt-menu__link-text">Admin Kesiswaan</span></a></li>
 <li class="kt-menu__item my-1 <?= $activeSide == 'admin_humas' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Humas') ?>" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-user"></i><span class="kt-menu__link-text">Admin Humas</span></a></li>
