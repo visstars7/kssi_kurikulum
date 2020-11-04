@@ -22,7 +22,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="shortcut icon" href="assets/img/logo_kurikulum.png">
+    <link rel="shortcut icon" href="<?= base_url('assets/img/logo_kurikulum.png') ?>">
 
     <!--begin::Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
@@ -30,21 +30,21 @@ License: You must have a valid license purchased only from https://themes.getboo
     <!--end::Fonts -->
 
     <!--begin::Page Vendors Styles(used by this page) -->
-    <link href="assets/keen/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('assets/keen/plugins/custom/fullcalendar/fullcalendar.bundle.css') ?>" rel="stylesheet" type="text/css" />
 
     <!--end::Page Vendors Styles -->
 
     <!--begin::Global Theme Styles(used by all pages) -->
-    <link href="assets/keen/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="assets/keen/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('assets/keen/plugins/global/plugins.bundle.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('assets/keen/css/style.bundle.css') ?>" rel="stylesheet" type="text/css" />
 
     <!--end::Global Theme Styles -->
 
     <!--begin::Layout Skins(used by all pages) -->
-    <link href="assets/keen/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
-    <link href="assets/keen/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
-    <link href="assets/keen/css/skins/brand/navy.css" rel="stylesheet" type="text/css" />
-    <link href="assets/keen/css/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('assets/keen/css/skins/header/base/light.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('assets/keen/css/skins/header/menu/light.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('assets/keen/css/skins/brand/navy.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('assets/keen/css/skins/aside/navy.css') ?>" rel="stylesheet" type="text/css" />
 
 
     <!--begin:Assets -->
@@ -56,9 +56,13 @@ License: You must have a valid license purchased only from https://themes.getboo
     <link rel="stylesheet" href="<?= base_url('assets/plugins/fontawsome/css/all.min.css'); ?>">
 
     <link rel="stylesheet" href="<?= base_url('assets/plugins/select2/dist/select2-bootstrap4.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/plugins/select2/dist/select2-bootstrap4.min.css'); ?>">
-
-
+    <!-- <link rel="stylesheet" href="<?= base_url('assets/plugins/select2/dist/select2-bootstrap4.min.css'); ?>"> -->
+    <link rel="stylesheet" href="<?= base_url('assets/plugins/DataTables/datatables.css'); ?>">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- <script src="<?= base_url('assets/plugins/jquery/jquery-3.4.1.min.js'); ?>"></script> -->
+    <script src="<?= base_url('assets/plugins/DataTables/datatables.js'); ?>"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css"/> -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <!--end::Assets -->
 </head>
 
@@ -72,7 +76,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
         <div class="kt-header-mobile__logo">
             <a href="<?= base_url('Landing') ?>">
-                <img alt="Logo" src="assets/img/logo_kurikulum.png" style="width: 20%;">
+                <img alt="Logo" src="<?= base_url('assets/img/logo_kurikulum.png') ?>" style="width: 20%;">
             </a>
         </div>
         <div class="kt-header-mobile__toolbar">
@@ -97,7 +101,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
                     <div class="kt-aside__brand-logo">
                         <a href="<?= base_url('Landing') ?>">
-                            <img alt="Logo" src="assets/img/logo_kurikulum.png" style="width: 30%; margin-top:5%;">
+                            <img alt="Logo" src="<?= base_url('assets/img/logo_kurikulum.png') ?>" style="width: 30%; margin-top:5%;">
                         </a>
                     </div>
                     <div class="kt-aside__brand-tools">
@@ -142,7 +146,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                 <div class="kt-header__topbar-user kt-rounded-">
                                     <span class="kt-header__topbar-welcome">Hi,</span>
                                     <span class="kt-header__topbar-username">Sean</span>
-                                    <img alt="Pic" src="assets/keen/media/users/300_25.jpg" class="kt-rounded-" />
+                                    <img alt="Pic" src="<?= base_url('assets/keen/media/users/300_25.jpg') ?>" class="kt-rounded-" />
 
                                     <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
                                     <span class="kt-badge kt-badge--username kt-badge--lg kt-badge--brand kt-hidden kt-badge--bold">S</span>
@@ -154,7 +158,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                         <div class="kt-user-card__pic">
 
                                             <!--use "kt-rounded" class for rounded avatar style-->
-                                            <img alt="Pic" src="assets/keen/media/users/300_21.jpg" class="kt-rounded-" />
+                                            <img alt="Pic" src="<?= base_url('assets/keen/media/users/300_21.jpg') ?>" class="kt-rounded-" />
                                         </div>
                                         <div class="kt-user-card__details">
                                             <div class="kt-user-card__name">Alex Stone</div>
@@ -210,18 +214,6 @@ License: You must have a valid license purchased only from https://themes.getboo
 
                 <!-- begin:Assets -->
 
-                <script href="<?= base_url('assets/plugins/bootstrap/js/bootstrap.min.js'); ?>"></script>
-
-                <script href="<?= base_url('assets/plugins/fontawesome/DataTables-1.10.21/js/dataTables.bootstrap4.js'); ?>"></script>
-                <script href="<?= base_url('assets/plugins/DataTables/DataTables-1.10.21/js/jquery.dataTables.js'); ?>"></script>
-                <script href="<?= base_url('assets/plugins/DataTables/DataTables-1.10.21/js/jquery.dataTables.min.js'); ?>"></script>
-
-                <script href="<?= base_url('assets/plugins/DataTables/Responsive-2.2.5/js/responsive.bootstrap4.js'); ?>"></script>
-
-                <script href="<?= base_url('assets/plugins/fontawesome/js/all.min.js'); ?>"></script>
-
-                <script href="<?= base_url('assets/plugins/select2/docs/script.js'); ?>"></script>
-
                 <!-- end:Assets -->
 
                 <!-- begin::Global Config(global config for global JS sciprts) -->
@@ -261,18 +253,18 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <!-- end::Global Config -->
 
                 <!--begin::Global Theme Bundle(used by all pages) -->
-                <script src="assets/keen/plugins/global/plugins.bundle.js" type="text/javascript"></script>
-                <script src="assets/keen/js/scripts.bundle.js" type="text/javascript"></script>
+                <script src="<?= base_url('assets/keen/plugins/global/plugins.bundle.js') ?>" type="text/javascript"></script>
+                <script src="<?= base_url('assets/keen/js/scripts.bundle.js') ?>" type="text/javascript"></script>
 
                 <!--end::Global Theme Bundle -->
 
                 <!--begin::Page Vendors(used by this page) -->
-                <script src="assets/keen/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+                <script src="<?= base_url('assets/keen/plugins/custom/fullcalendar/fullcalendar.bundle.js') ?>" type="text/javascript"></script>
 
                 <!--end::Page Vendors -->
 
                 <!--begin::Page Scripts(used by this page) -->
-                <script src="assets/keen/js/pages/dashboard.js" type="text/javascript"></script>
+                <script src="<?= base_url('assets/keen/js/pages/dashboard.js') ?>" type="text/javascript"></script>
 
                 <!--end::Page Scripts -->
 </body>

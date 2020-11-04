@@ -1,1 +1,0 @@
-<?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Auth/views/v_login.blade.php ENDPATH**/ ?>
