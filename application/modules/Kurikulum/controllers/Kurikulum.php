@@ -11,7 +11,6 @@ class Kurikulum extends MX_Controller
     public function index()
     {
         $data = [
-            'nama' => 'Havis',
             'activeSide' => 'dashboard'
         ];
         return view('Kurikulum.views.dashboard', $data);

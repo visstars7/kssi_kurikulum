@@ -1,5 +1,5 @@
-
-<?php $__env->startSection('content'); ?>;
+@extends('Kesiswaan.views.kesiswaan')
+@section('content');
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 
@@ -921,5 +921,4 @@
 
     <!-- end:: Content -->
 </div>
-<?php $__env->stopSection(); ?>
-<?php echo $__env->make('Kurikulum.views.kurikulum', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Kurikulum/views/dashboard.blade.php ENDPATH**/ ?>
+@endsection

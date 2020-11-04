@@ -922,4 +922,4 @@
     <!-- end:: Content -->
 </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('Kurikulum.views.kurikulum', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Kurikulum/views/dashboard.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Kesiswaan.views.kesiswaan', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Kesiswaan/views/dashboard.blade.php ENDPATH**/ ?>

@@ -1,5 +1,5 @@
-@extends('Kurikulum.views.kurikulum');
-@section('content')
+@extends('Kurikulum.views.kurikulum')
+@section('content');
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 
@@ -162,17 +162,17 @@
                         <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-brand nav-tabs-bold" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active show" data-toggle="tab" href="#kt_portlet_tabs_1_1_content" role="tab" aria-selected="false">
-                                    Sekarang
+                                    Hari
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#kt_portlet_tabs_1_2_content" role="tab" aria-selected="false">
-                                    Seminggu
+                                    Minggu
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#kt_portlet_tabs_1_3_content" role="tab" aria-selected="true">
-                                    Sebulan
+                                    Bulan
                                 </a>
                             </li>
                         </ul>
@@ -500,17 +500,17 @@
                         <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-brand nav-tabs-bold" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#kt_portlet_tabs_1_1_1_content" role="tab">
-                                    Sekarang
+                                    Hari
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#kt_portlet_tabs_1_1_2_content" role="tab">
-                                    Seminggu
+                                    Minggu
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#kt_portlet_tabs_1_1_3_content" role="tab">
-                                    Sebulan
+                                    Bulan
                                 </a>
                             </li>
                         </ul>
