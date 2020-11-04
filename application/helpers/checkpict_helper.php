@@ -1,7 +1,7 @@
 <?php
 // digunakan untuk memindah file ke dalam direktori lokal
 // basic user:: checkpict();
-function checkpict($tipe="",$index = "", $file = "", $folder = "")
+function checkpict($tipe = "", $index = "", $file = "", $folder = "")
 {
     if (!empty($file[$index]['name'])) {
         if ($file[$index]['type'] == $tipe) {
@@ -11,7 +11,7 @@ function checkpict($tipe="",$index = "", $file = "", $folder = "")
             $place   = $_SERVER['DOCUMENT_ROOT'] . "/kssi_kurikulum/assets/$folder/" . $name;
 
             if (move_uploaded_file($file[$index]['tmp_name'], $place)) {
-                return base_url('upload/uploaded/') . $name;
+                return base_url("assets/$folder/") . $name;
             } else {
                 return false;
             }

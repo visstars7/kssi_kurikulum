@@ -163,24 +163,24 @@
                     </div>
                     <div class="form-group">
                         <label for="mapel" class="col-form-label">Mapel: </label>
-                        <select name="mapel" id="mapel-detail" class="custom-select" readonly></select>
+                        <select name="mapel" id="mapel-detail" class="custom-select" disabled></select>
                     </div>
                     <div class="form-group">
                         <label for="kelas" class="col-form-label">Kelas: </label>
-                        <select name="kelas" id="kelas-detail" class="custom-select" readonly></select>
+                        <select name="kelas" id="kelas-detail" class="custom-select" disabled></select>
                     </div>
                     <div class="form-group">
                         <label for="judul-buku" class="col-form-label">Tingkat Kelas: </label>
-                        <select name="tingkat_kelas" id="tingkat-kelas-detail" class="custom-select" readonly>
+                        <select name="tingkat_kelas" id="tingkat-kelas-detail" class="custom-select" disabled>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="judul-buku" class="col-form-label">Judul Buku: </label>
-                        <input type="text" class="form-control" id="judul-buku-detail" name="judul_buku">
+                        <input type="text" class="form-control" id="judul-buku-detail" name="judul_buku" readonly>
                     </div>
                     <div class="form-group">
                         <label for="semester" class="col-form-label">Semester: </label>
-                        <select name="semester" id="semester-detail" class="custom-select" name="semester" readonly>
+                        <select name="semester" id="semester-detail" class="custom-select" name="semester" disabled>
                         </select>
                     </div>
                     <div class="form-group">
@@ -193,9 +193,32 @@
                     </div>
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-dismiss="modal" data-target="#pdf-modal">Tampilkan Pdf</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
             </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<!-- show pdf modal -->
+<div class="modal fade" id="pdf-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tampilan E-book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <object type="application/pdf" id="pdf-object" style="width:100%" height="700">
+                </object>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -270,6 +293,7 @@
                 $("#semester-detail").html(`<option>${ebook.semester}</option>`);
                 $("#create-at-detail").val(ebook.create_at);
                 $("#update-detail").val(ebook.update_at);
+                $("#pdf-object").attr("data", ebook.file);
             }
 
         });

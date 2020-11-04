@@ -22,7 +22,7 @@ class Perpustakaan extends MX_Controller
 
     public function store()
     {
-        $pict_name = checkpict('application/pdf', 'file_buku', $_FILES);
+        $pict_name = checkpict('application/pdf', 'file_buku', $_FILES, 'e-book');
         if ($pict_name !== 0) {
 
             $data = [
@@ -78,7 +78,7 @@ class Perpustakaan extends MX_Controller
                 'update_at' => date('Y-m-d H:i:s')
             ];
         } else {
-            $pict_name = checkpict('application/pdf', 'file_buku', $_FILES);
+            $pict_name = checkpict('application/pdf', 'file_buku', $_FILES, 'e-book');
             if ($pict_name !== 0) {
 
                 $data = [
