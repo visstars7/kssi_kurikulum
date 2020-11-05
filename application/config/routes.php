@@ -59,3 +59,5 @@ $route['Kesiswaan'] = 'Kesiswaan';
 $route['Humas'] = 'Humas';
 $route['Perpustakaan'] = 'Perpustakaan';
 $route['api-perpus/(:any)'] = 'Perpustakaan/API/$1';
+$route['Kurikulum/rpp'] = 'Kurikulum/Rpp';
+$route['Kurikulum/silabus'] = 'Kurikulum/Silabus';

@@ -4,6 +4,7 @@
 </div>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('sidebar'); ?>
+<li class="kt-menu__item my-1 <?= $activeSide == 'dashboard' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-tachometer-alt"></i><span class="kt-menu__link-text">Dashboard</span></a> </li>
 <li class="kt-menu__item  kt-menu__item--submenu my-1 <?= $activeSide == 'absensi_kbm' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fas fa-clipboard-list" style="margin-left:-3px;"></i><span class="kt-menu__link-text" style="margin-left:3px;">Absensi KBM</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
         <ul class="kt-menu__subnav">
@@ -17,8 +18,8 @@
     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
         <ul class="kt-menu__subnav">
             <li class="kt-menu__item kt-menu__item--parent <?= $activeSide == 'rpp_silabus' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">RPP / Silabus</span></span></li>
-            <li class="kt-menu__item <?= $activeSide == 'rpp' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="dashboards/brand-aside.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">RPP</span></a></li>
-            <li class="kt-menu__item <?= $activeSide == 'silabus' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="dashboards/navy-header.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Silabus</span></a></li>
+            <li class="kt-menu__item <?= $activeSide == 'rpp' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/rpp') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">RPP</span></a></li>
+            <li class="kt-menu__item <?= $activeSide == 'silabus' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/silabus') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Silabus</span></a></li>
         </ul>
     </div>
 </li>
@@ -53,6 +54,6 @@
         </ul>
     </div>
 </li>
-<li class="kt-menu__item my-1 <?= $activeSide == 'e_rapot' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-award"></i><span class="kt-menu__link-text">E-rapot</span></a></li>
+<li class="kt-menu__item my-1 <?= $activeSide == 'e_rapot' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-award"></i><span class="kt-menu__link-text">E-rapot</span></a></li>
 
 <?php $__env->stopSection(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Kurikulum/views/sidebar.blade.php ENDPATH**/ ?>

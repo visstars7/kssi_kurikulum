@@ -18,8 +18,8 @@
     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
         <ul class="kt-menu__subnav">
             <li class="kt-menu__item kt-menu__item--parent <?= $activeSide == 'rpp_silabus' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">RPP / Silabus</span></span></li>
-            <li class="kt-menu__item <?= $activeSide == 'rpp' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="dashboards/brand-aside.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">RPP</span></a></li>
-            <li class="kt-menu__item <?= $activeSide == 'silabus' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="dashboards/navy-header.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Silabus</span></a></li>
+            <li class="kt-menu__item <?= $activeSide == 'rpp' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/rpp') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">RPP</span></a></li>
+            <li class="kt-menu__item <?= $activeSide == 'silabus' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/silabus') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Silabus</span></a></li>
         </ul>
     </div>
 </li>
