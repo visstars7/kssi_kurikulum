@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('content'); ?>
+<?php $__env->startSection('content'); ?>;
 <div class="container-fluid">
     <div class="subheader py-6 py-lg-8 subheader-transparent" id="kt_subheader">
         <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -32,5 +32,5 @@
         </div>
     </div>
 </div>
-<?php $__env->stopSection(); ?>;
+<?php $__env->stopSection(); ?>
 <?php echo $__env->make('Perpustakaan.views.perpustakaan', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Perpustakaan/views/dashboard.blade.php ENDPATH**/ ?>

@@ -1,5 +1,5 @@
 @extends('Perpustakaan.views.perpustakaan')
-@section('content')
+@section('content');
 <div class="container-fluid">
     <div class="subheader py-6 py-lg-8 subheader-transparent" id="kt_subheader">
         <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -32,4 +32,4 @@
         </div>
     </div>
 </div>
-@endsection;
+@endsection
