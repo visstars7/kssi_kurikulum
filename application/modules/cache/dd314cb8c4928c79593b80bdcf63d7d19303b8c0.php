@@ -1,9 +1,9 @@
-@section('user-role')
+<?php $__env->startSection('user-role'); ?>
 <div class="d-flex justify-content-start mx-5">
     <h3 style="font-size: 20px;color:#777d9b;margin-top:13%;">Hallo, Admin Kurikulum</h3>
 </div>
-@endsection
-@section('sidebar')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('sidebar'); ?>
 <li class="kt-menu__item my-1 <?= $activeSide == 'dashboard' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-tachometer-alt"></i><span class="kt-menu__link-text">Dashboard</span></a> </li>
 <li class="kt-menu__item  kt-menu__item--submenu my-1 <?= $activeSide == 'absensi_kbm' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fas fa-clipboard-list" style="margin-left:-3px;"></i><span class="kt-menu__link-text" style="margin-left:3px;">Absensi KBM</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
@@ -56,4 +56,4 @@
 </li>
 <li class="kt-menu__item my-1 <?= $activeSide == 'e_rapot' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-award"></i><span class="kt-menu__link-text">E-rapot</span></a></li>
 
-@endsection
+<?php $__env->stopSection(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Kurikulum/views/sidebar.blade.php ENDPATH**/ ?>

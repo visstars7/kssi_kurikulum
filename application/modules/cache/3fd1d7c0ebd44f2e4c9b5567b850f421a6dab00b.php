@@ -1,9 +1,9 @@
-@section('user-role')
+<?php $__env->startSection('user-role'); ?>
 <div class="d-flex justify-content-start mx-5">
     <h3 style="font-size: 20px;color:#777d9b;margin-top:13%;">Hallo, Admin Kesiswaan</h3>
 </div>
-@endsection
-@section('sidebar')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('sidebar'); ?>
 <li class="kt-menu__item my-1 <?= $activeSide == 'dashboard' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-tachometer-alt"></i><span class="kt-menu__link-text">Dashboard</span></a></li>
 <li class="kt-menu__item my-1 <?= $activeSide == 'pelanggaran_siswa' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-gavel"></i><span class="kt-menu__link-text">Pelanggaran Siswa</span></a></li>
 <li class="kt-menu__item my-1 <?= $activeSide == 'absensi_siswa' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a target="_blank" href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-calendar-alt"></i><span class="kt-menu__link-text">Absensi Siswa</span></a></li>
@@ -16,4 +16,4 @@
         </ul>
     </div>
 </li>
-@endsection
+<?php $__env->stopSection(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Kesiswaan/views/sidebar.blade.php ENDPATH**/ ?>

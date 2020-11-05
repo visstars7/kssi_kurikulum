@@ -1,4 +1,4 @@
-@extends('Superadmin.views.superadmin')
+@extends('Kurikulum.views.kurikulum')
 @section('content');
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
