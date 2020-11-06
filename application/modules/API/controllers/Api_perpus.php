@@ -16,7 +16,7 @@ class Api_perpus extends MX_Controller
             $ebook = $this->M_perpustakaan->get('v_ebook', 'db');
             echo json_encode($ebook);
         } else {
-            echo "You're not promitted use this";
+            redirect(base_url('Auth'));
         }
     }
 }

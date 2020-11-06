@@ -60,6 +60,8 @@ $route['Humas'] = 'Humas';
 $route['Perpustakaan'] = 'Perpustakaan';
 $route['Kurikulum/rpp'] = 'Kurikulum/Rpp';
 $route['Kurikulum/silabus'] = 'Kurikulum/Silabus';
+
+
 // API URI's
 $route['api-perpus/(:any)'] = 'API/Api_perpus/$1';
 $route['api-rpp/(:any)'] = 'API/Api_rpp/$1';
