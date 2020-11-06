@@ -2,14 +2,48 @@
 
 class M_rpp_silabus extends CI_model
 {
+    private $master;
     public function __construct()
     {
         parent::__construct();
+        $this->master = $this->load->database('db_master', TRUE);
     }
 
-    var $table = 'v_ebook'; //nama tabel dari database
-    var $column_order = array(null, null, null, 'semester', null, null, null); //Sesuaikan dengan field
-    var $column_search = array('judul_buku', 'nama_mapel', 'nama_kelas', 'semester'); //field yang diizin untuk pencarian 
+    public function get($db, $tb)
+    {
+        return $this->$db->get($tb)->result_array();
+    }
+
+    public function get_where($db, $tb, $data)
+    {
+        return $this->$db->get_where($tb, $data)->result_array();
+    }
+
+    public function insert($tb, $data, $target)
+    {
+        if ($this->db->insert($tb, $data)) {
+            redirect(base_url("Kurikulum/$target"));
+        }
+    }
+
+    public function update($tb, $column, $id, $data, $target)
+    {
+        $this->db->where($column, $id);
+        if ($this->db->update($tb, $data)) {
+            redirect(base_url("Kurikulum/$target"));
+        }
+    }
+
+    public function delete($tb, $data, $target)
+    {
+        if ($this->db->delete($tb, $data)) {
+            redirect(base_url("Kurikulum/$target"));
+        }
+    }
+
+    var $table; //nama tabel dari database
+    var $column_order = array(null, null, null, 'tingkat_kelas', 'semester', 'create_at', 'update_at', null, null, null); //Sesuaikan dengan field
+    var $column_search = array('nip', 'guru', 'tingkat_kelas', 'semester'); //field yang diizin untuk pencarian 
     var $order = array('create_at' => 'DESC'); // default order 
 
     private function _get_datatables_query()
@@ -46,8 +80,9 @@ class M_rpp_silabus extends CI_model
         }
     }
 
-    function get_datatables()
+    function get_datatables($tb)
     {
+        $this->table = $tb;
         $this->_get_datatables_query();
         if ($_POST['length'] != -1)
             $this->db->limit($_POST['length'], $_POST['start']);
