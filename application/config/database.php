@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '54.198.69.153 3306',
+	'hostname' => 'database-1.cdgjalcodjao.us-east-1.rds.amazonaws.com',
 	'username' => 'admin',
 	'password' => 'havisiqbal1212',
 	'database' => 'db_kurikulum',
@@ -96,7 +96,7 @@ $db['default'] = array(
 );
 $db['db_master'] = array(
 	'dsn'	=> '',
-	'hostname' => '54.198.69.153 3306',
+	'hostname' => 'database-1.cdgjalcodjao.us-east-1.rds.amazonaws.com',
 	'username' => 'admin',
 	'password' => 'havisiqbal1212',
 	'database' => 'db_master',
