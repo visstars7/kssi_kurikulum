@@ -58,4 +58,11 @@ $route['Kurikulum'] = 'Kurikulum';
 $route['Kesiswaan'] = 'Kesiswaan';
 $route['Humas'] = 'Humas';
 $route['Perpustakaan'] = 'Perpustakaan';
-$route['api-perpus/(:any)'] = 'Perpustakaan/API/$1';
+$route['Kurikulum/rpp'] = 'Kurikulum/Rpp';
+$route['Kurikulum/silabus'] = 'Kurikulum/Silabus';
+
+
+// API URI's
+$route['api-perpus/(:any)'] = 'API/Api_perpus/$1';
+$route['api-rpp/(:any)'] = 'API/Api_rpp/$1';
+$route['api-silabus/(:any)'] = 'API/Api_silabus/$1';
