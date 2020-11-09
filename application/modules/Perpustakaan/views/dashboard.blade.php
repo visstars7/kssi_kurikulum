@@ -1,6 +1,6 @@
 @extends('Perpustakaan.views.perpustakaan')
-@section('content');
-<div class="container-fluid">
+@section('content')
+<div class="container-fluid my-4">
     <div class="subheader py-6 py-lg-8 subheader-transparent" id="kt_subheader">
         <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
             <!--begin::Info-->

@@ -1,7 +1,8 @@
 
-<?php $__env->startSection('content'); ?>;
+<?php $__env->startSection('content'); ?>
+
 <!-- begin:: Content -->
-<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid my-4">
 
     <!--begin::Dashboard 3-->
 
@@ -921,5 +922,6 @@
 
     <!-- end:: Content -->
 </div>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('Humas.views.humas', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Humas/views/dashboard.blade.php ENDPATH**/ ?>
