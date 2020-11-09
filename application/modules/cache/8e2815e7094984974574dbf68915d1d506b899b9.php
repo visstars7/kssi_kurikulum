@@ -1,9 +1,9 @@
-@extends('Kurikulum.views.kurikulum')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="container-fluid">
     <div class="row mt-5">
         <div class="col-md-12">
-            <button onclick="read()" class="btn btn-success float-right" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-circle"></i> <strong>Tambah Rpp</strong></button>
+            <button onclick="read()" class="btn btn-success float-right" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-circle"></i> <strong>Tambah Silabus</strong></button>
         </div>
     </div>
     <div class="row mt-5">
@@ -35,13 +35,13 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Rpp</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Silabus</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('Kurikulum/Rpp/store') ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url('Kurikulum/Silabus/store') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="mapel" class="col-form-label">Nama guru</label>
                         <select name="guru" id="guru" class="custom-select"></select>
@@ -67,10 +67,10 @@
                             <option value="2">2</option>
                         </select>
                     </div>
-                    <label class="col-form-label">Upload file rpp </label>
+                    <label class="col-form-label">Upload file silabus </label>
                     <div class="input-group mb-3">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile01" name="file_rpp">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" name="file_silabus">
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                         </div>
                     </div>
@@ -90,15 +90,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Update Rpp</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Update Silabus</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('Kurikulum/Rpp/update') ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url('Kurikulum/Silabus/update') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <input type="hidden" id="id-rpp" name="id_rpp">
+                        <input type="hidden" id="id-silabus" name="id_silabus">
                     </div>
                     <div class="form-group">
                         <label for="mapel" class="col-form-label">Nama guru</label>
@@ -118,10 +118,10 @@
                         <select name="semester" id="semester-update" class="custom-select">
                         </select>
                     </div>
-                    <label class="col-form-label">Upload file rpp </label>
+                    <label class="col-form-label">Upload file silabus</label>
                     <div class="input-group mb-3">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="file-rpp-update" name="file-rpp-update">
+                            <input type="file" class="custom-file-input" id="file-silabus-update" name="file-silabus-update">
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                         </div>
                     </div>
@@ -196,12 +196,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tampilan Rpp</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tampilan Silabus</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" id="show-rpp"></div>
+            <div class="modal-body" id="show-silabus"></div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
@@ -217,7 +217,7 @@
         $.ajax({
             data: `db=master&tb=guru`,
             type: `post`,
-            url: `<?= base_url('Kurikulum/Rpp/get_data') ?>`,
+            url: `<?= base_url('Kurikulum/Silabus/get_data') ?>`,
             dataType: `json`,
             success: (res) => {
                 var opt = [];
@@ -232,7 +232,7 @@
         $.ajax({
             data: `db=db&tb=tb_mapel`,
             type: `post`,
-            url: `<?= base_url('Kurikulum/Rpp/get_data') ?>`,
+            url: `<?= base_url('Kurikulum/Silabus/get_data') ?>`,
             dataType: `json`,
             success: (res) => {
                 var opt = [];
@@ -249,12 +249,12 @@
         $.ajax({
             data: `id=${id}`,
             type: 'post',
-            url: `<?= base_url('Kurikulum/Rpp/edit_data') ?>`,
+            url: `<?= base_url('Kurikulum/Silabus/edit_data') ?>`,
             dataType: 'json',
             success: (res) => {
                 guru = res.guru;
                 mapel = res.mapel;
-                rpp = res.rpp[0];
+                silabus = res.silabus[0];
                 var tingkat = ['X', 'XI', 'XII'];
                 var smt = ['1', '2'];
                 var optSmt = [];
@@ -263,7 +263,7 @@
                 var optMapel = [];
 
                 $.each(guru, (index, value) => {
-                    if (value.nip == rpp.nip) {
+                    if (value.nip == silabus.nip) {
                         optGuru += `<option value='${value.nip}' selected>${value.nama}</option>`;
                     } else {
                         optGuru += `<option value='${value.nip}'>${value.nama}</option>`;
@@ -271,7 +271,7 @@
                 });
 
                 $.each(mapel, (index, value) => {
-                    if (value.id_mapel == rpp.id_mapel) {
+                    if (value.id_mapel == silabus.id_mapel) {
                         optMapel += `<option value='${value.id_mapel}' selected>${value.nama_mapel}</option>`;
                     } else {
                         optMapel += `<option value='${value.id_mapel}'>${value.nama_mapel}</option>`;
@@ -279,44 +279,45 @@
                 });
 
                 $.each(tingkat, (index, value) => {
-                    if ((index + 1) == rpp.tingkat_kelas) {
+                    if ((index + 1) == silabus.tingkat_kelas) {
                         optTingkat += `<option value='${index+1}' selected>${value}</option>`;
                     } else {
                         optTingkat += `<option value='${index+1}'>${value}</option>`;
                     }
                 });
                 $.each(smt, (index, value) => {
-                    if (index + 1 == rpp.semester) {
+                    if (index + 1 == silabus.semester) {
                         optSmt += `<option value='${index+1}' selected>${value}</option>`;
                     } else {
                         optSmt += `<option value='${index+1}'>${value}</option>`;
                     }
                 });
 
-                $("#semester-update").append(optSmt);
-                $("#tingkat-kelas-update").append(optTingkat);
+                $("#semester-update").html(optSmt);
+                $("#tingkat-kelas-update").html(optTingkat);
                 $("#guru-update").html(optGuru);
                 $("#mapel-update").html(optMapel);
-                $("#id-rpp").val(rpp.id_rpp);
+                $("#id-silabus").val(silabus.id_silabus);
             }
         });
     }
 
     function show(id) {
         $.ajax({
-            data: `id=${id}&tb=tb_rpp&column=id_rpp&db=db`,
+            data: `id=${id}&tb=tb_silabus&column=id_silabus&db=db`,
             type: 'post',
-            url: "<?= base_url('Kurikulum/rpp/get_data') ?>",
+            url: "<?= base_url('Kurikulum/silabus/get_data') ?>",
             dataType: 'json',
             success: (res) => {
-                var rpp = res[0];
-                $("#show-rpp").html(`<object type="application/pdf" data="${rpp.file}" id="pdf-object" style="width:100%" height="700"></object>`);
+                var silabus = res[0];
+                $("#show-silabus").html(`<object type="application/pdf" data="${silabus.file}" id="pdf-object" style="width:100%" height="700"></object>`);
             }
         });
     }
 
     $('#guru').select2();
     $('#mapel').select2();
+
     $('#table-perpus').DataTable({
         responsive: true,
         "destroy": true,
@@ -325,7 +326,7 @@
         "order": [],
 
         "ajax": {
-            "url": "<?= base_url('Kurikulum/Rpp/rpp_datatables') ?>",
+            "url": "<?= base_url('Kurikulum/Silabus/silabus_datatables') ?>",
             "type": "POST"
         },
 
@@ -338,4 +339,5 @@
 
     });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Kurikulum.views.kurikulum', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Kurikulum/views/silabus.blade.php ENDPATH**/ ?>
