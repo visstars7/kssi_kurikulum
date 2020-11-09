@@ -10,9 +10,6 @@ function checkpict($tipe = "", $index = "", $file = "", $folder = "")
 
             $place   = $_SERVER['DOCUMENT_ROOT'] . "" . str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']) . "assets/$folder/" . $name;
 
-            echo $place;
-            die;
-
             if (move_uploaded_file($file[$index]['tmp_name'], $place)) {
                 return base_url("assets/$folder/") . $name;
             } else {
