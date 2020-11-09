@@ -1,5 +1,6 @@
-@extends('Kurikulum.views.kurikulum')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
+
 
 <div class="container-fluid">
     <div class="row mt-5">
@@ -95,4 +96,5 @@
     </div>
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Kurikulum.views.kurikulum', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\kssi_kurikulum\application\modules/Kurikulum/views/hari_pelajaran.blade.php ENDPATH**/ ?>

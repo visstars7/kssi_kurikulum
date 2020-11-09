@@ -1,6 +1,6 @@
 
-<?php $__env->startSection('content'); ?>;
-<div class="container-fluid">
+<?php $__env->startSection('content'); ?>
+<div class="container-fluid my-4">
     <div class="subheader py-6 py-lg-8 subheader-transparent" id="kt_subheader">
         <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
             <!--begin::Info-->

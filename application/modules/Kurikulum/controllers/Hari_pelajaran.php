@@ -11,9 +11,11 @@ class Hari_pelajaran extends MX_Controller
 
     public function index()
     {
+        $data['id_hari'] = $this->M_hari_pelajaran->getAll();
         $data = [
-            'activeSide' => 'hari_pelajaran'
+            'activeSide' => 'hari_pelajaran',
+            'id_hari' => $this->M_hari_pelajaran->getAll()
         ];
         return view('Kurikulum.views.hari_pelajaran', $data);
-	}
+    }
 };
