@@ -1,4 +1,3 @@
-;
 <?php $__env->startSection('content'); ?>
 <div class="container-fluid">
     <div class="row mt-5">
@@ -273,6 +272,10 @@
                 $("#id-sesi-update").val(id);
             }
         });
+        $("#hari-update").select2();
+        $("#sesi-update").select2();
+        $("#waktu_mulai-update").select2();
+        $("#waktu_selesai-update").select2();
     }
 
     $('#table').DataTable({

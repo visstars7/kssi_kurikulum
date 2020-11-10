@@ -1,4 +1,3 @@
-;
 <?php $__env->startSection('content'); ?>
 <div style="margin-left:30px;margin-top:30px">
     <h2>Ini adalah view dari mapel</h2>
