@@ -1,4 +1,4 @@
-@extends('Kurikulum.views.kurikulum');
+@extends('Kurikulum.views.kurikulum')
 @section('content')
 <div class="container-fluid">
     <div class="row mt-5">

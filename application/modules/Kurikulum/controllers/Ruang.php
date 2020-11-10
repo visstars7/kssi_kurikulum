@@ -1,19 +1,19 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class E_rapot extends MX_Controller
+class Ruang extends MX_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_e_rapot');
+        $this->load->model('M_ruang');
     }
 
     public function index()
     {
         $data = [
-            'activeSide' => 'e_rapot'
+            'activeSide' => 'ruang'
         ];
-        return view('Kurikulum.views.e_rapot', $data);
+        return view('Kurikulum.views.ruang', $data);
     }
 };
