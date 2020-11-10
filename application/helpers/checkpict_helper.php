@@ -8,7 +8,7 @@ function checkpict($tipe = "", $index = "", $file = "", $folder = "")
             $extensi = explode(".", $file[$index]['name']);
             $name    = random_int(1, 9999) . "." . $extensi[1];
 
-            $place   = $_SERVER['DOCUMENT_ROOT'] . "/kssi_kurikulum/assets/$folder/" . $name;
+            $place   = $_SERVER['DOCUMENT_ROOT'] . "" . str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']) . "assets/$folder/" . $name;
 
             if (move_uploaded_file($file[$index]['tmp_name'], $place)) {
                 return base_url("assets/$folder/") . $name;

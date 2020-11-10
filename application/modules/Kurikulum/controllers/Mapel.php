@@ -15,5 +15,5 @@ class Mapel extends MX_Controller
             'activeSide' => 'mapel'
         ];
         return view('Kurikulum.views.mapel', $data);
-	}
+    }
 };
