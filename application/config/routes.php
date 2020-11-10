@@ -53,13 +53,32 @@ $route['default_controller'] = 'Landing';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 $route['Auth'] = 'Auth';
-$route['e-book'] = 'Perpustakaan/e_book';
 $route['Kurikulum'] = 'Kurikulum';
-$route['Kesiswaan'] = 'Kesiswaan';
-$route['Humas'] = 'Humas';
-$route['Perpustakaan'] = 'Perpustakaan';
+$route['Kurikulum/absensi-siswa'] = 'Kurikulum/Absensi_siswa';
+$route['Kurikulum/absensi-guru'] = 'Kurikulum/Absensi_guru';
 $route['Kurikulum/rpp'] = 'Kurikulum/Rpp';
 $route['Kurikulum/silabus'] = 'Kurikulum/Silabus';
+$route['Kurikulum/materi'] = 'Kurikulum/Materi';
+$route['Kurikulum/penyerahan-materi'] = 'Kurikulum/Penyerahan-materi';
+$route['Kurikulum/jadwal'] = 'Kurikulum/Jadwal';
+$route['Kurikulum/jurnal'] = 'Kurikulum/Jurnal';
+$route['Kurikulum/ruang'] = 'Kurikulum/Ruang';
+$route['Kurikulum/hari-pelajaran'] = 'Kurikulum/Hari_pelajaran';
+$route['Kurikulum/guru-mapel'] = 'Kurikulum/Guru_mapel';
+$route['Kurikulum/sesi-pelajaran'] = 'Kurikulum/Sesi_pelajaran';
+$route['Kurikulum/mapel'] = 'Kurikulum/Mapel';
+$route['Kurikulum/daftar-nilai'] = 'Kurikulum/Daftar_nilai';
+$route['Kurikulum/pengelola-nilai'] = 'Kurikulum/Pengelola_nilai';
+$route['Kurikulum/e-rapot'] = 'Kurikulum/E_rapot';
+$route['Kesiswaan'] = 'Kesiswaan';
+$route['Kesiswaan/pelanggaran-siswa'] = 'Kesiswaan/Pelanggaran_siswa';
+$route['Kesiswaan/absensi-siswa'] = 'Kesiswaan/Absensi_siswa';
+$route['Kesiswaan/siswa-belum-berkelas'] = 'Kesiswaan/Siswa-belum-berkelas';
+$route['Kesiswaan/siswa-sudah-berkelas'] = 'Kesiswaan/Siswa-sudah-berkelas';
+$route['Humas'] = 'Humas';
+$route['Humas/dudi-prakerin'] = 'Humas/Dudi_prakerin';
+$route['Perpustakaan'] = 'Perpustakaan';
+$route['e-book'] = 'Perpustakaan/e_book';
 
 
 // API URI's
