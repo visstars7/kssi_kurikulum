@@ -923,4 +923,4 @@
 </div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('Kesiswaan.views.kesiswaan', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Kesiswaan/views/dashboard.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Humas.views.humas', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Humas/views/dashboard.blade.php ENDPATH**/ ?>

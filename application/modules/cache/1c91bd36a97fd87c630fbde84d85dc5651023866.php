@@ -22,8 +22,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="shortcut icon" href="<?= base_url('assets/img/logo_kurikulum.png') ?>">
-
+    <link rel="icon" href="<?= base_url('assets/img/logo_kurikulum.png') ?>" type="image/gif" sizes="16x16">
     <!--begin::Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
 
