@@ -42,7 +42,7 @@ class M_rpp_silabus extends CI_model
     }
 
     var $table; //nama tabel dari database
-    var $column_order = array(null, null, null, 'tingkat_kelas', 'semester', 'create_at', 'update_at', null, null, null); //Sesuaikan dengan field
+    var $column_order = array(null, null, null, 'tingkat_kelas', 'semester', 'create_at', 'update_at', null, null, null, null); //Sesuaikan dengan field
     var $column_search = array('nip', 'guru', 'tingkat_kelas', 'semester'); //field yang diizin untuk pencarian 
     var $order = array('create_at' => 'DESC'); // default order 
 
