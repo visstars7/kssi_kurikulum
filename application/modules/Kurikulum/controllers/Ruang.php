@@ -19,6 +19,57 @@ class Ruang extends MX_Controller
         return view('Kurikulum.views.ruang', $data);
     }
 
+    private function _generateText($image, $font, $text, $x, $y)
+    {
+        $W_src = imagesx($image);
+        $H_src = imagesy($image);
+        imagecreatetruecolor($W_src, $H_src);
+        $white = imagecolorallocate($image, 255, 255, 255);
+        imagettftext($image, 30, 0, $x, $y, $white, $font, $text);
+    }
+
+    private function generateQr($srcImage, $qr, $qr_x, $qr_y)
+    {
+        // $qr_w = imagesx($qr);
+        // $qr_h = imagesy($qr);
+        // $img_w = imagesx($srcImage);
+        // $img_h = imagesy($srcImage);
+
+        imagecopyresampled($srcImage, $qr, 50, 335, 0, 0, 200, 200, 240, 240);
+    }
+
+    private function _generateImage($data)
+    {
+        header('Content-type:img/png');
+
+        // get the image resource
+        $QR = imagecreatefrompng($data['file']);
+        $image = imagecreatefrompng(base_url('assets/img/qrclass.png'));
+
+        // image with text class
+        $font = FCPATH . 'assets/font/Roboto.ttf';
+        $len = strlen($data['nama_ruang']);
+
+        if ($len > 3) {
+            $this->_generateText($image, $font, substr($data['nama_ruang'], 0, -$len / 2), 115, 100);
+            $this->_generateText($image, $font, substr($data['nama_ruang'], 3), 100, 150);
+        } else {
+            $this->_generateText($image, $font, $data['nama_ruang'], 115, 100);
+        }
+
+        // draw QR on Template
+        $this->generateQr($image, $QR, 100, 100);
+
+        imagepng($image);
+        imagedestroy($image);
+    }
+
+    public function download($id)
+    {
+        $data  = $this->M_ruang->get_where('tb_ruang', ['id_ruang' => $id]);
+        $this->_generateImage($data[0]);
+    }
+
     public function delete($id)
     {
         $this->M_ruang->delete('tb_ruang', 'id_ruang', $id);

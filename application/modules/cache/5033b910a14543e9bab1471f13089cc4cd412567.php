@@ -41,7 +41,7 @@
                 <form action="<?= base_url('Kurikulum/Ruang/store') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group" for="hari">
                         <label>Nama Ruangan</label>
-                        <input class="form-control" type="text" name="nama_ruang" id="nama_ruang"></input>
+                        <input class="form-control" type="text" name="nama_ruang" id="nama_ruang" maxlength="7" minlength="3"></input>
                     </div>
             </div>
             <div class="modal-footer">
@@ -58,7 +58,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Update Hari Pelajaran</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Update Ruangan</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -67,7 +67,7 @@
                 <form action="<?= base_url('Kurikulum/Ruang/update') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group" for="hari">
                         <label>Nama Ruangan</label>
-                        <input class="form-control" type="text" name="nama_ruang" id="nama_ruang-update"></input>
+                        <input class="form-control" type="text" name="nama_ruang" id="nama_ruang-update" maxlength="7" minlength="3"></input>
                         <input class="form-control" type="hidden" name="id_ruang" id="id-update" readonly></input>
                     </div>
             </div>
