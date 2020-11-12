@@ -46,15 +46,14 @@
         </ul>
     </div>
 </li>
-<li class="kt-menu__item kt-menu__item--submenu my-1 <?= $activeSide == 'mengelola_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fas fa-poll-h" style="margin-left:-3px;"></i><span class="kt-menu__link-text" style="margin-left:3px;">Mengelola Nilai</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+<li class="kt-menu__item kt-menu__item--submenu my-1 <?= $activeSide == 'mengelola_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fas fa-poll-h" style="margin-left:-3px;"></i><span class="kt-menu__link-text" style="margin-left:3px;">Penilaian</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
         <ul class="kt-menu__subnav">
-            <li class="kt-menu__item kt-menu__item--parent <?= $activeSide == 'mengelola_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Mengelola Nilai</span></span></li>
+            <li class="kt-menu__item kt-menu__item--parent <?= $activeSide == 'mengelola_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Penilaian</span></span></li>
             <li class="kt-menu__item <?= $activeSide == 'daftar_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/daftar-nilai') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Daftar Nilai</span></a></li>
-            <li class="kt-menu__item <?= $activeSide == 'pengelola_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/pengelola-nilai') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Pengelola Nilai</span></a></li>
+            <li class="kt-menu__item <?= $activeSide == 'daftar_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/e-rapot') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">E-rapot</span></a></li>
         </ul>
     </div>
 </li>
-<li class="kt-menu__item my-1 <?= $activeSide == 'e_rapot' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/e-rapot') ?>" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-award"></i><span class="kt-menu__link-text">E-rapot</span></a></li>
 
 <?php $__env->stopSection(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Kurikulum/views/sidebar.blade.php ENDPATH**/ ?>
