@@ -85,3 +85,4 @@ $route['e-book'] = 'Perpustakaan/e_book';
 $route['api-perpus/(:any)'] = 'API/Api_perpus/$1';
 $route['api-rpp/(:any)'] = 'API/Api_rpp/$1';
 $route['api-silabus/(:any)'] = 'API/Api_silabus/$1';
+$route['api-jadwal/(:any)'] = 'API/Api_jadwal/$1';

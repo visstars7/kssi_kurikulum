@@ -12,8 +12,10 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"jenssegers/blade": "^1.4"
+		"jenssegers/blade": "^1.4",
+		"setasign/fpdf": "1.8.1"
 	},
+
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
 	},

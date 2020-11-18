@@ -47,13 +47,9 @@ class Sesi_pelajaran extends MX_Controller
 
     public function insert()
     {
-        if ($this->input->is_ajax_request() == TRUE) {
-            $data = $this->input->post();
-            $data['create_at'] = date('Y-m-d H:i:s');
-            $this->M_sesi->insert('tb_sesi_pelajaran', $data);
-        } else {
-            show_404();
-        }
+        $data = $this->input->post();
+        $data['create_at'] = date('Y-m-d H:i:s');
+        $this->M_sesi->insert('tb_sesi_pelajaran', $data);
     }
 
     public function delete($id)
