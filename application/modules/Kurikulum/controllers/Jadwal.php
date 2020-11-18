@@ -62,7 +62,7 @@ class Jadwal extends MX_Controller
     public function reset()
     {
         if ($this->M_jadwal->reset('db', 'tb_jadwal')) {
-            redirect(base_url('Kurkilum/jadwal'));
+            redirect(base_url('Kurikulum/jadwal'));
         }
     }
 
