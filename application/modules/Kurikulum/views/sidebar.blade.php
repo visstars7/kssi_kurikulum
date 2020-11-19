@@ -51,7 +51,7 @@
         <ul class="kt-menu__subnav">
             <li class="kt-menu__item kt-menu__item--parent <?= $activeSide == 'mengelola_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Penilaian</span></span></li>
             <li class="kt-menu__item <?= $activeSide == 'daftar_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/daftar-nilai') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Daftar Nilai</span></a></li>
-            <li class="kt-menu__item <?= $activeSide == 'daftar_nilai' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/e-rapot') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">E-rapot</span></a></li>
+            <li class="kt-menu__item <?= $activeSide == 'e_rapot' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum/e-rapot') ?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">E-rapot</span></a></li>
         </ul>
     </div>
 </li>
