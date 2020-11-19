@@ -56,9 +56,8 @@ class Daftar_nilai extends MX_Controller
         $sheet->setCellValue('B6', 'NIP');
         $sheet->setCellValue('C6', 'Nama Siswa');
 
-        for ($i = 1; $i <= count($data['jenis_uji']); $i++) {
-            $j = $i - 1;
-            $sheet->setCellValue("$arr[$j]6", $data['jenis_uji'][$j]);
+        for ($i = 0; $i < count($data['jenis_uji']); $i++) {
+            $sheet->setCellValue("$arr[$i]6", $data['jenis_uji'][$i]);
         }
 
         foreach ($data['siswa'] as $field) {
