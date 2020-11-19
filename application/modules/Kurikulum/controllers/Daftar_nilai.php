@@ -114,7 +114,7 @@ class Daftar_nilai extends MX_Controller
                     'nisn'  => $result[$i][1],
                     'id_guru_mapel' => $result[1][2],
                     'id_kelas' => $result[0][2],
-                    'jenis_uji' => $result[5][$j],
+                    'jenis_uji' => strtoupper($result[5][$j]),
                     'nilai' => $result[$i][$j],
                     'semester' => $result[3][1],
                     'create_at' => date('Y-m-d H:i:s')
