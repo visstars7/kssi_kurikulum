@@ -192,7 +192,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                     </li>
                                     <li class="kt-nav__separator kt-nav__separator--fit"></li>
                                     <li class="kt-nav__custom kt-space-between">
-                                        <a href="custom/login/login-v1.html" target="_blank" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</a>
+                                        <a href="" onclick="signout()" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</a>
                                         <i class="flaticon2-information kt-label-font-color-2" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more..."></i>
                                     </li>
                                 </ul>
@@ -248,7 +248,17 @@ License: You must have a valid license purchased only from https://themes.getboo
                         }
                     };
                 </script>
+                <script>
+                    if (localStorage.getItem('role') == undefined || localStorage.getItem('role') == '' && localStorage.getItem('nip') == undefined || localStorage.getItem('nip') == '' && localStorage.getItem('nama') == undefined || localStorage.getItem('nama') == '') {
+                        location.href = `<?= base_url('Auth') ?>`;
+                    }
 
+                    function signout() {
+                        localStorage.removeItem('nip');
+                        localStorage.removeItem('nama');
+                        localStorage.removeItem('role');
+                    }
+                </script>
                 <!-- end::Global Config -->
 
                 <!--begin::Global Theme Bundle(used by all pages) -->
