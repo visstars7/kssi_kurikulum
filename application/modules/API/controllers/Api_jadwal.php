@@ -34,7 +34,7 @@ class Api_jadwal extends MX_Controller
                 $this->pdf->load_view('v_table_jadwal', $data);
             }
         } else {
-            redirect(base_url('Auth'));
+            echo json_encode(['status' => 404]);
         }
     }
 }
