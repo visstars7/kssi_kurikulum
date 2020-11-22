@@ -141,6 +141,10 @@
         </div>
     </div>
     <script>
+        $(document).ready(() => {
+            localStorage.clear();
+        });
+
         function submit() {
             var form = $("#form").serialize();
             $.ajax({
