@@ -121,10 +121,10 @@ class E_rapot extends MX_Controller
             if (!empty($data[0]) && $y == $post['tahun_ajaran']) {
                 $this->_toExcel($data, $ujian, $data_uji, $kelas);
             } else {
-                echo json_encode(['error' => 'Data tidak ditemukan']);
+                redirect(base_url('Kurikulum/E-rapot'));
             }
         } else {
-            echo json_encode(['error' => 'Data tidak ditemukan']);
+            redirect(base_url('Kurikulum/E-rapot'));
         }
     }
 };
