@@ -144,7 +144,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                 <!--use "kt-rounded" class for rounded avatar style-->
                                 <div class="kt-header__topbar-user kt-rounded-">
                                     <span class="kt-header__topbar-welcome">Hi,</span>
-                                    <span class="kt-header__topbar-username">Sean</span>
+                                    <span class="kt-header__topbar-username user"></span>
                                     <img alt="Pic" src="<?= base_url('assets/keen/media/users/300_25.jpg') ?>" class="kt-rounded-" />
 
                                     <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
@@ -160,8 +160,8 @@ License: You must have a valid license purchased only from https://themes.getboo
                                             <img alt="Pic" src="<?= base_url('assets/keen/media/users/300_21.jpg') ?>" class="kt-rounded-" />
                                         </div>
                                         <div class="kt-user-card__details">
-                                            <div class="kt-user-card__name">Alex Stone</div>
-                                            <div class="kt-user-card__position">CTO, Loop Inc.</div>
+                                            <div class="kt-user-card__name user"></div>
+                                            <div class="kt-user-card__position" id="role"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -258,6 +258,12 @@ License: You must have a valid license purchased only from https://themes.getboo
                         localStorage.removeItem('nama');
                         localStorage.removeItem('role');
                     }
+
+                    var user = localStorage.getItem('nama');
+                    $('.user').text(user);
+
+                    var role = localStorage.getItem('role');
+                    $('#role').text(role);
                 </script>
                 <!-- end::Global Config -->
 

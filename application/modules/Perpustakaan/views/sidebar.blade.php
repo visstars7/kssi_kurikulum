@@ -1,6 +1,6 @@
 @section('user-role')
 <div class="d-flex justify-content-start mx-5">
-    <h3 style="font-size: 20px;color:#777d9b;margin-top:13%;">Hallo, Admin Perpustakaan</h3>
+    <h3 style="font-size: 20px;color:#777d9b;margin-top:13%;">Perpustakaan</h3>
 </div>
 @endsection
 @section('sidebar')
