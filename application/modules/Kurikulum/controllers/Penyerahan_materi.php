@@ -31,12 +31,23 @@ class Penyerahan_materi extends MX_Controller
                 $no++;
                 $row = [];
 
+                switch ($field->status) {
+                    case 1:
+                        $status = 'Terlambat';
+                        break;
+
+                    default:
+                        $status = 'Tepat Waktu';
+                        break;
+                }
+
                 $row[] = $no;
                 $row[] = $field->nama_siswa;
                 $row[] = $field->nama_kelas;
                 $row[] = $field->id_materi_pjj;
                 $row[] = $field->waktu_penyerahan;
                 $row[] = $field->create_at;
+                $row[] = $status;
                 $data[] = $row;
             }
 

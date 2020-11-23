@@ -11,7 +11,7 @@
                         <th>ID materi</th>
                         <th>Deadline</th>
                         <th>di serahkan</th>
-                        <th>Deadline</th>
+                        <th>Status penyerahan</th>
                     </tr>
                 </thead>
                 <tbody>
