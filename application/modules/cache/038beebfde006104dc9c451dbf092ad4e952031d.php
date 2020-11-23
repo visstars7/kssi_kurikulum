@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 <head>
     <base href="">
     <meta charset="utf-8" />
-    <title>@yield('title')</title>
+    <title><?php echo $__env->yieldContent('title'); ?></title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -112,7 +112,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
                     <div id="kt_aside_menu" class="kt-aside-menu kt-scroll ps ps--active-y" data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500" style="height: 193px; overflow: hidden;">
                         <ul class="kt-menu__nav " id="sidebar">
-                            @yield('sidebar')
+                            <?php echo $__env->yieldContent('sidebar'); ?>
                         </ul>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <!-- begin:: Header -->
                 <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
                     <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
-                        @yield('user-role')
+                        <?php echo $__env->yieldContent('user-role'); ?>
                     </div>
                     <!-- begin:: Header Menu -->
                     <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
@@ -208,7 +208,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 
                 <!-- end:: Header -->
                 <!-- begin:content -->
-                @yield('content')
+                <?php echo $__env->yieldContent('content'); ?>
                 <!-- end:content -->
 
                 <!-- begin:Assets -->
@@ -280,4 +280,4 @@ License: You must have a valid license purchased only from https://themes.getboo
 
 <!-- end::Body -->
 
-</html>
+</html><?php /**PATH C:\laragon\www\kssi_kurikulum\application\modules/template/master.blade.php ENDPATH**/ ?>
