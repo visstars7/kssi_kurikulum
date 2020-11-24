@@ -1,6 +1,6 @@
 <?php $__env->startSection('user-role'); ?>
 <div class="d-flex justify-content-start mx-5">
-    <h3 style="font-size: 20px;color:#777d9b;margin-top:13%;">Hallo, Admin Kurikulum</h3>
+    <h3 style="font-size: 20px;color:#777d9b;margin-top:13%;">Kurikulum</h3>
 </div>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('sidebar'); ?>

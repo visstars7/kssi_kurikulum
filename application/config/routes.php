@@ -88,3 +88,5 @@ $route['api-silabus/(:any)'] = 'API/Api_silabus/$1';
 $route['api-jadwal/(:any)'] = 'API/Api_jadwal/$1';
 $route['api-materi/(:any)'] = 'API/Api_materi/$1';
 $route['api-penyerahan/(:any)'] = 'API/Api_penyerahan/$1';
+$route['api-absensi-guru/(:any)'] = 'API/Api_absensi_guru/$1';
+$route['api-absensi-siswa/(:any)'] = 'API/Api_absensi_siswa/$1';
