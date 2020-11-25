@@ -37,6 +37,7 @@ class Auth extends MX_Controller
             $data['status'] = 200;
             $data['role'] = $akun;
             $data['guru'] = $this->M_auth->get_where('master', 'guru', ['nip' => $akun[0]['username']]);
+            $data['siswa'] = $this->M_auth->get_where('master', 'siswa', ['nisn' => $akun[0]['username']]);
             echo json_encode($data);
         } else {
             echo json_encode(['status' => 404]);
