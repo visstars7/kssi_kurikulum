@@ -92,3 +92,4 @@ $route['api-absensi-guru/(:any)'] = 'API/Api_absensi_guru/$1';
 $route['api-absensi-siswa/(:any)'] = 'API/Api_absensi_siswa/$1';
 $route['api-jurnal/(:any)'] = 'API/Api_jurnal/$1';
 $route['api-auth/(:any)'] = 'Auth/Auth/$1';
+$route['api-profile/(:any)'] = 'API/Api_profile/$1';
