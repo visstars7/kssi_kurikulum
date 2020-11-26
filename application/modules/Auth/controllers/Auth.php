@@ -7,6 +7,7 @@ class Auth extends MX_Controller
     {
         parent::__construct();
         $this->load->model('M_auth');
+        header("Access-Control-Allow-Origin:*");
     }
 
     public function index()
