@@ -921,6 +921,6 @@
 
     <!-- end:: Content -->
 </div>
-<<<<<<< HEAD=======>>>>>>> kurikulum
-    <?php $__env->stopSection(); ?>
-    <?php echo $__env->make('Kurikulum.views.kurikulum', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Kurikulum/views/dashboard.blade.php ENDPATH**/ ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Kurikulum.views.kurikulum', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Kurikulum/views/dashboard.blade.php ENDPATH**/ ?>

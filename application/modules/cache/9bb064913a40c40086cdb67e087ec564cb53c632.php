@@ -1,6 +1,6 @@
 <?php $__env->startSection('user-role'); ?>
 <div class="d-flex justify-content-start mx-5">
-    <h3 style="font-size: 20px;color:#777d9b;margin-top:13%;">Kurikulum</h3>
+    <h3 style="font-size: 20px;color:#777d9b;margin-top:25%;">Kurikulum</h3>
 </div>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('sidebar'); ?>
@@ -55,14 +55,11 @@
         </ul>
     </div>
 </li>
-<<<<<<< HEAD <li class="kt-menu__item my-1 <?= $activeSide == 'e_rapot' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="https://keenthemes.com/keen/preview/demo1/builder.html" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-award"></i><span class="kt-menu__link-text">E-rapot</span></a></li>
-    =======
-    >>>>>>> kurikulum
 
-    <script>
-        var role = localStorage.getItem('role');
-        if (role !== 'kurikulum_admin') {
-            var sidebar = `
+<script>
+    var role = localStorage.getItem('role');
+    if (role !== 'kurikulum_admin') {
+        var sidebar = `
         <li class="kt-menu__item my-1 <?= $activeSide == 'dashboard' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true"><a href="<?= base_url('Kurikulum') ?>" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-tachometer-alt"></i><span class="kt-menu__link-text">Dashboard</span></a> </li>
         <li class="kt-menu__item  kt-menu__item--submenu my-1 <?= $activeSide == 'rpp_silabus' ? 'kt-menu__item--open' : false ?>" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon far fa-edit" style="margin-left:-3px;"></i><span class="kt-menu__link-text" style="margin-left:3px;">RPP / Silabus</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
@@ -92,8 +89,8 @@
     </div>
 </li>`;
 
-            $("#sidebar").html(sidebar);
+        $("#sidebar").html(sidebar);
 
-        }
-    </script>
-    <?php $__env->stopSection(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Kurikulum/views/sidebar.blade.php ENDPATH**/ ?>
+    }
+</script>
+<?php $__env->stopSection(); ?><?php /**PATH /opt/lampp/htdocs/kssi_kurikulum/application/modules/Kurikulum/views/sidebar.blade.php ENDPATH**/ ?>
