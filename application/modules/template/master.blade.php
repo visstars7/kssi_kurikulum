@@ -22,8 +22,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="shortcut icon" href="<?= base_url('assets/img/logo_kurikulum.png') ?>">
-
+    <link rel="icon" href="<?= base_url('assets/img/logo_kurikulum.png') ?>" type="image/gif" sizes="16x16">
     <!--begin::Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
 
@@ -61,7 +60,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!-- <script src="<?= base_url('assets/plugins/jquery/jquery-3.4.1.min.js'); ?>"></script> -->
     <script src="<?= base_url('assets/plugins/DataTables/datatables.js'); ?>"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css"/> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" /> -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <!--end::Assets -->
 </head>
@@ -112,7 +111,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                 <!-- end:: Aside Brand -->
                 <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
                     <div id="kt_aside_menu" class="kt-aside-menu kt-scroll ps ps--active-y" data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500" style="height: 193px; overflow: hidden;">
-                        <ul class="kt-menu__nav ">
+                        <ul class="kt-menu__nav " id="sidebar">
                             @yield('sidebar')
                         </ul>
                     </div>
@@ -145,7 +144,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                 <!--use "kt-rounded" class for rounded avatar style-->
                                 <div class="kt-header__topbar-user kt-rounded-">
                                     <span class="kt-header__topbar-welcome">Hi,</span>
-                                    <span class="kt-header__topbar-username">Sean</span>
+                                    <span class="kt-header__topbar-username user"></span>
                                     <img alt="Pic" src="<?= base_url('assets/keen/media/users/300_25.jpg') ?>" class="kt-rounded-" />
 
                                     <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
@@ -153,7 +152,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                 </div>
                             </div>
                             <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
-                                <div class="kt-user-card kt-margin-b-40 kt-margin-b-30-tablet-and-mobile" style="background-image: url(assets/keen/media/misc/head_bg_sm.jpg)">
+                                <div class="kt-user-card kt-margin-b-40 kt-margin-b-30-tablet-and-mobile" style="background-image: url(<?= base_url('assets/keen/media/misc/head_bg_sm.jpg') ?>)">
                                     <div class="kt-user-card__wrapper">
                                         <div class="kt-user-card__pic">
 
@@ -161,8 +160,8 @@ License: You must have a valid license purchased only from https://themes.getboo
                                             <img alt="Pic" src="<?= base_url('assets/keen/media/users/300_21.jpg') ?>" class="kt-rounded-" />
                                         </div>
                                         <div class="kt-user-card__details">
-                                            <div class="kt-user-card__name">Alex Stone</div>
-                                            <div class="kt-user-card__position">CTO, Loop Inc.</div>
+                                            <div class="kt-user-card__name user"></div>
+                                            <div class="kt-user-card__position" id="role"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -193,7 +192,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                     </li>
                                     <li class="kt-nav__separator kt-nav__separator--fit"></li>
                                     <li class="kt-nav__custom kt-space-between">
-                                        <a href="custom/login/login-v1.html" target="_blank" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</a>
+                                        <a href="" onclick="signout()" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</a>
                                         <i class="flaticon2-information kt-label-font-color-2" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more..."></i>
                                     </li>
                                 </ul>
@@ -249,7 +248,23 @@ License: You must have a valid license purchased only from https://themes.getboo
                         }
                     };
                 </script>
+                <script>
+                    if (localStorage.getItem('role') == undefined || localStorage.getItem('role') == '' && localStorage.getItem('nip') == undefined || localStorage.getItem('nip') == '' && localStorage.getItem('nama') == undefined || localStorage.getItem('nama') == '') {
+                        location.href = `<?= base_url('Auth') ?>`;
+                    }
 
+                    function signout() {
+                        localStorage.removeItem('nip');
+                        localStorage.removeItem('nama');
+                        localStorage.removeItem('role');
+                    }
+
+                    var user = localStorage.getItem('nama');
+                    $('.user').text(user);
+
+                    var role = localStorage.getItem('role');
+                    $('#role').text(role);
+                </script>
                 <!-- end::Global Config -->
 
                 <!--begin::Global Theme Bundle(used by all pages) -->

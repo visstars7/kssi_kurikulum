@@ -1,7 +1,8 @@
 @extends('Humas.views.humas')
-@section('content');
+@section('content')
+
 <!-- begin:: Content -->
-<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid my-4">
 
     <!--begin::Dashboard 3-->
 
@@ -921,4 +922,5 @@
 
     <!-- end:: Content -->
 </div>
+
 @endsection
