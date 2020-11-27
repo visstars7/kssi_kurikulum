@@ -68,17 +68,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | make active.  By default there is only one group (the 'default' group).
 |
 | The $query_builder variables lets you determine whether or not to load
-| the query builder class.
+| the query builder clashavisis.
 */
 $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'database-1.cdgjalcodjao.us-east-1.rds.amazonaws.com',
-	'username' => 'admin',
-	'password' => 'havisiqbal1212',
-	'database' => 'db_kurikulum',
+	'hostname' => 'us-cdbr-east-02.cleardb.com',
+	'username' => 'bb5628d1504760',
+	'password' => '6cdc3215',
+	'database' => 'heroku_5415252c1880e5f',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -96,10 +96,10 @@ $db['default'] = array(
 );
 $db['db_master'] = array(
 	'dsn'	=> '',
-	'hostname' => 'database-1.cdgjalcodjao.us-east-1.rds.amazonaws.com',
-	'username' => 'admin',
-	'password' => 'havisiqbal1212',
-	'database' => 'db_master',
+	'hostname' => 'r1bsyfx4gbowdsis.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+	'username' => 'g5qdrlpnvsaigjhf',
+	'password' => 'lm38vtpfp8t6slob',
+	'database' => 'lhuww0qefwprh2xt',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
