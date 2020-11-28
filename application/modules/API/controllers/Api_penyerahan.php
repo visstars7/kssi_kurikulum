@@ -35,27 +35,23 @@ class Api_penyerahan extends MX_Controller
 
     public function store()
     {
-        if ($this->input->is_ajax_request() == TRUE) {
-            $post = $this->input->post();
-            $row = count($this->M_penyerahan->get('db', 'tb_penyerahan_pjj'));
+        $post = $this->input->post();
+        $row = count($this->M_penyerahan->get('db', 'tb_penyerahan_pjj'));
 
-            if ($post['tipe_penyerahan'] == 1) {
+        if ($post['tipe_penyerahan'] == 1) {
 
-                $tipe = $_FILES['file']['type'];
-                $post['id_penyerahan'] = idgenerator($row, 'JWB-');
-                $post['create_at'] = date('Y-m-d H:i:s');
-                $post['file'] = checkpict($tipe, 'file', $_FILES, 'penyerahan');
-                $post['status'] = $this->_checkDeadline($post);
-            } else {
-                $post['id_penyerahan'] = idgenerator($row, 'JWB-');
-                $post['create_at'] = date('Y-m-d H:i:s');
-                $post['status'] = $this->_checkDeadline($post);
-            }
-            if ($this->M_penyerahan->insert('db', 'tb_penyerahan_pjj', $post)) {
-                echo json_encode(['status' => 200]);
-            } else {
-                echo json_encode(['status' => 404]);
-            }
+            $tipe = $_FILES['file']['type'];
+            $post['id_penyerahan'] = idgenerator($row, 'JWB-');
+            $post['create_at'] = date('Y-m-d H:i:s');
+            $post['file'] = checkpict($tipe, 'file', $_FILES, 'penyerahan');
+            $post['status'] = $this->_checkDeadline($post);
+        } else {
+            $post['id_penyerahan'] = idgenerator($row, 'JWB-');
+            $post['create_at'] = date('Y-m-d H:i:s');
+            $post['status'] = $this->_checkDeadline($post);
+        }
+        if ($this->M_penyerahan->insert('db', 'tb_penyerahan_pjj', $post)) {
+            echo json_encode(['status' => 200]);
         } else {
             echo json_encode(['status' => 404]);
         }

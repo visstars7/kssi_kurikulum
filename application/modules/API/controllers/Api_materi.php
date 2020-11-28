@@ -21,6 +21,17 @@ class Api_Materi extends MX_Controller
         }
     }
 
+    public function get_materi()
+    {
+        $post = $this->input->post();
+        $json = $this->M_materi->get_where($post['db'], $post['tb'], ['id_materi_pjj' => $post['id_materi']]);
+        if ($json) {
+            echo json_encode($json);
+        } else {
+            echo json_encode(['status' => 404]);
+        }
+    }
+
 
     public function store()
     {
