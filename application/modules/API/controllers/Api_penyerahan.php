@@ -6,12 +6,14 @@ class Api_penyerahan extends MX_Controller
     {
         parent::__construct();
         $this->load->model('M_penyerahan');
+        header("Access-Control-Allow-Origin:*");
     }
 
-    public function get()
+    public function get_where()
     {
-        if ($this->input->is_ajax_request() == TRUE) {
-            $json = $this->M_penyerahan->get('db', 'v_penyerahan_pjj');
+        $post = $this->input->post();
+        $json = $this->M_materi->get_where($post['db'], $post['tb'], ['id_kelas' => $post['kelas_id']]);
+        if ($json) {
             echo json_encode($json);
         } else {
             echo json_encode(['status' => 404]);

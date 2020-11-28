@@ -14,6 +14,12 @@ class M_materi extends CI_model
         return $this->$db->get($tb)->result_array();
     }
 
+    public function get_where($db, $tb, $data)
+    {
+        return $this->$db->get_where($tb, $data)->result_array();
+    }
+
+
     public function insert($db, $tb, $data)
     {
         return $this->$db->insert($tb, $data);
