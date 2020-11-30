@@ -15,6 +15,7 @@ class Api_absensi_guru extends MX_Controller
         $post = $this->input->post();
         // absen masuk
         if ($post['jenis_absensi'] == 1) {
+
             unset($post['jenis_absensi']);
 
             $post['sesi_masuk'] = $this->M_api_absensi->get_sesi()['id_sesi'];
@@ -22,7 +23,6 @@ class Api_absensi_guru extends MX_Controller
             $post['id_kelas'] = $this->M_api_absensi->get_kelas($post['sesi_masuk'], $post['id_guru_mapel'])['id_kelas'];
             $post['waktu_masuk'] =  date('Y-m-d H:i:s');
             $post['create_at'] = date('Y-m-d H:i:s');
-
             // absen keluar
         } elseif ($post['jenis_absensi'] == 2) {
             unset($post['jenis_absensi']);

@@ -28,8 +28,9 @@ class M_api_absensi extends CI_Model
     public function get_sesi()
     {
         $min = '07:00';
-
-        $max = date('H:i');
+        date_default_timezone_set('Asia/Jakarta');
+        // $max = date('H:i');
+        $max = '10:11';
 
         return $this->db->query("SELECT * FROM `tb_sesi_pelajaran` WHERE `waktu_mulai` BETWEEN '$min' AND '$max' ORDER BY `waktu_selesai` DESC LIMIT 1")->row_array();
     }
@@ -42,5 +43,23 @@ class M_api_absensi extends CI_Model
     public function insert($db, $tb, $data)
     {
         return $this->$db->insert($tb, $data);
+    }
+
+    public function insert2($db, $tb, $post)
+    {
+        $i = 0;
+        $data = [];
+        $batch = [];
+        foreach ($post['nisn'] as $nisn) {
+            $data['nisn'] = $nisn;
+            $data['status_kehadiran'] = $post['status_kehadiran'][$i++];
+            $data['sesi_ke'] = $post['sesi_ke'];
+            $data['id_guru_mapel'] = $post['id_guru_mapel'];
+            $data['id_kelas'] = $post['id_kelas'];
+            $data['create_at'] = $post['create_at'];
+            $this->$db->insert($tb, $data);
+        }
+
+        return true;
     }
 };
