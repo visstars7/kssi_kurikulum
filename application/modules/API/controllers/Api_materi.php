@@ -1,24 +1,37 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Materi extends MX_Controller
+class Api_Materi extends MX_Controller
 {
     public function __construct()
     {
         parent::__construct();
         $this->load->model('M_materi');
+        header("Access-Control-Allow-Origin:*");
     }
 
-    public function get()
+    public function get_where()
     {
         $post = $this->input->post();
-        $json = $this->M_materi->get($post['db'], $post['tb']);
+        $json = $this->M_materi->get_where($post['db'], $post['tb'], ['id_kelas' => $post['kelas_id']]);
         if ($json) {
             echo json_encode($json);
         } else {
             echo json_encode(['status' => 404]);
         }
     }
+
+    public function get_materi()
+    {
+        $post = $this->input->post();
+        $json = $this->M_materi->get_where($post['db'], $post['tb'], ['id_materi_pjj' => $post['id_materi']]);
+        if ($json) {
+            echo json_encode($json);
+        } else {
+            echo json_encode(['status' => 404]);
+        }
+    }
+
 
     public function store()
     {
