@@ -231,7 +231,9 @@
     <div class="section">
         <div class="content">
             <h2>Sistem Informasi Kurikulum</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <p>
+                Sistem informasi Kurikulum adalah sistem yang mempermudah penyusunan dan perancangan pembelajaran yang akan diberikan kepada siswa
+            </p>
         </div>
         <div class="imgbox">
             <img src="<?= base_url('assets/img/landing.png'); ?>">
